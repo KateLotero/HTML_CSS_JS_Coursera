@@ -1,0 +1,96 @@
+/********** Base styles **********/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  h1 {
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    border: 1px solid black;
+    margin: 2.5%;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: gray;
+  }
+
+  h3 {
+    border: 1px solid black;
+    text-align: center;
+    padding: 2% 5%;
+  }
+
+  p {
+    display: flex;
+    font-size: large;
+    color: black;
+    background-color: gray;
+    padding: 2.5%;
+  }
+
+  p,
+  h3 {
+    margin: 0;
+  }
+
+  #chicken {
+    background-color: rgb(197, 123, 80);
+  }
+
+  #beef {
+    background-color: brown;
+  }
+
+  #sushi {
+    background-color: rgb(226, 184, 93);
+  }
+
+  /* Simple Responsive Framework. */
+  .row {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+
+  /********** Large devices only **********/
+  @media (min-width: 992px) {
+    .row {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      padding: 1%;
+    }
+
+    .card {
+      margin: 1%;
+    }
+  }
+
+  /********** Medium devices only **********/
+  @media (min-width: 768px) and (max-width: 991px) {
+    .row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 5%;
+      column-gap: 2.5%;
+    }
+
+    .card {
+      margin: auto;
+    }
+
+    .all-column {
+      grid-column: 1/3;
+    }
+  }
